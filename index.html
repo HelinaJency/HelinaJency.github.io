@@ -1,237 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Helina Jency J — Portfolio</title>
-  <meta name="description" content="Portfolio of Helina Jency J — Data Analytics, Python, SQL, ML projects." />
+  <title>Helina Jency J – Portfolio</title>
   <style>
-    :root{
-      --bg:#0f172a;         /* slate-900 */
-      --card:#0b1227;       /* deep card */
-      --muted:#94a3b8;      /* slate-400 */
-      --text:#e5e7eb;       /* gray-200 */
-      --brand:#7c3aed;      /* violet-600 */
-      --brand-2:#a78bfa;    /* violet-300 */
-      --pill:#1e293b;       /* slate-800 */
-      --border:#1f2a44;
-      --ok:#22c55e;
-    }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0a0f22,#0f172a);color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    a:focus,button:focus{outline:2px solid var(--brand-2);outline-offset:2px;border-radius:8px}
-    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
-    /* nav */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(10,15,34,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
-    .brand{font-weight:700;letter-spacing:.3px}
-    .menu{display:flex;gap:1rem;flex-wrap:wrap}
-    .menu a{padding:.45rem .8rem;border-radius:999px;background:transparent;border:1px solid transparent}
-    .menu a:hover{border-color:var(--brand);color:var(--brand-2)}
-    /* hero */
-    .hero{padding:4.5rem 0 3rem}
-    .tag{display:inline-block;font-size:.8rem;background:var(--pill);border:1px solid var(--border);padding:.35rem .7rem;border-radius:999px;color:var(--brand-2)}
-    h1{font-size:clamp(1.9rem,4vw,3rem);margin:.75rem 0 .4rem}
-    .subtitle{color:var(--muted);font-size:1.05rem}
-    .cta{margin:1.25rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem .9rem;border-radius:12px;border:1px solid var(--border);background:var(--pill)}
-    .btn.primary{background:var(--brand);border-color:var(--brand);color:white}
-    .btn:hover{transform:translateY(-1px)}
-    /* sections/cards */
-    section{padding:2.5rem 0;border-top:1px solid var(--border)}
-    h2{font-size:1.4rem;margin:0 0 1rem}
-    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem}
-    .pill{display:inline-block;background:var(--pill);border:1px solid var(--border);padding:.35rem .6rem;border-radius:999px;margin:.2rem;font-size:.85rem}
-    .list{margin:.3rem 0 .2rem;padding-left:1.1rem}
-    .list li{margin:.35rem 0}
-    .meta{color:var(--muted);font-size:.9rem}
-    /* footer */
-    footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color:var(--muted)}
-    /* small */
-    @media (max-width:640px){.hero{padding:3.5rem 0 2rem}}
+    body { font-family: Arial, sans-serif; margin: 0; background: #0f172a; color: #e5e7eb; }
+    a { color: #a78bfa; text-decoration: none; }
+    header { background: #1e293b; padding: 2rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin-top: .5rem; color: #94a3b8; }
+    nav { margin-top: 1rem; }
+    nav a { margin: 0 .5rem; padding: .4rem .8rem; border-radius: 6px; }
+    nav a:hover { background: #334155; }
+    section { padding: 2.5rem 1rem; max-width: 1000px; margin: auto; }
+    h2 { border-bottom: 2px solid #334155; padding-bottom: .3rem; margin-bottom: 1rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .card { background: #1e293b; padding: 1rem; border-radius: 10px; border: 1px solid #334155; }
+    .pill { display: inline-block; background: #334155; padding: .3rem .7rem; margin: .2rem; border-radius: 999px; font-size: .85rem; }
+    footer { text-align: center; padding: 1.5rem; border-top: 1px solid #334155; color: #94a3b8; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" role="navigation" aria-label="Primary">
-    <div class="container nav-inner">
-      <div class="brand">Helina Jency J</div>
-      <nav class="menu">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#certs">Certifications</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <!-- HEADER -->
+  <header>
+    <h1>Helina Jency J</h1>
+    <p>Aspiring Data Analyst | Python • SQL • Machine Learning</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certs">Highlights</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero container" id="home">
-    <span class="tag">Data Analytics • Python • SQL • ML • FSD</span>
-    <h1>Hello, I’m Helina Jency.</h1>
-    <p class="subtitle">
-      I love turning data into decisions. My interests include analytics, visualization, and
-      building AI/ML solutions that solve real problems.
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="#projects">View Projects</a>
-      <a class="btn" href="mailto:helinajency13@gmail.com" title="Email">Email</a>
-      <a class="btn" href="tel:+918144114144" title="Call">Call</a>
-      <a class="btn" href="https://linkedin.com/in/helina-jency-j" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://github.com/HelinaJency" target="_blank" rel="noopener">GitHub</a>
-      <!-- If you upload your resume PDF into the repo (e.g., /resume.pdf), update the link below -->
-      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="container" id="about">
-    <h2>Career Objective</h2>
-    <div class="card">
-      <p>
-        To leverage my knowledge and contribute to data-driven projects by applying skills in
-        data analysis, visualization, and problem-solving in a dynamic work environment.
-      </p>
-    </div>
-  </section>
-
   <!-- PROJECTS -->
-  <section class="container" id="projects">
-    <h2>Projects</h2>
+  <section id="projects">
+    <h2>Featured Projects</h2>
     <div class="grid">
-      <article class="card">
-        <h3>App for Testing Cataract Eye</h3>
-        <p class="meta">CNN • TensorFlow • Healthcare</p>
-        <p>Built an app concept with a CNN model to assist preliminary cataract screening for
-           Shankara Eye Hospital.</p>
-        <p>
-          <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">Code/Repo</a>
-        </p>
-      </article>
-
-      <article class="card">
+      <div class="card">
+        <h3>Cataract Eye Testing App</h3>
+        <p>Developed a CNN-based app concept to assist preliminary cataract screening for Shankara Eye Hospital.</p>
+        <p><strong>Tech:</strong> Python, TensorFlow</p>
+        <p><a href="https://github.com/HelinaJency" target="_blank">View Code</a></p>
+      </div>
+      <div class="card">
         <h3>Personal Finance AI Assistant</h3>
-        <p class="meta">Python • Analytics • Chat-style UX</p>
-        <p>Designed an AI assistant that helps users track spending and receive insights
-           for budgeting and habits.</p>
-        <p>
-          <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">Code/Repo</a>
-        </p>
-      </article>
-
-      <article class="card">
+        <p>Created a chatbot-style AI tool to track expenses and provide budgeting insights.</p>
+        <p><strong>Tech:</strong> Python, Data Analytics</p>
+        <p><a href="https://github.com/HelinaJency" target="_blank">View Code</a></p>
+      </div>
+      <div class="card">
         <h3>Face Recognition Attendance System</h3>
-        <p class="meta">Computer Vision • Automation</p>
-        <p>Automated attendance using face recognition to improve accuracy and efficiency.</p>
-        <p>
-          <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">Code/Repo</a>
-        </p>
-      </article>
+        <p>Automated attendance using computer vision for improved accuracy and efficiency.</p>
+        <p><strong>Tech:</strong> OpenCV, Python</p>
+        <p><a href="https://github.com/HelinaJency" target="_blank">View Code</a></p>
+      </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="container" id="skills">
+  <section id="skills">
     <h2>Skills</h2>
     <div class="grid">
       <div class="card">
         <h3>Technical</h3>
         <p>
           <span class="pill">Python</span>
-          <span class="pill">MySQL</span>
-          <span class="pill">Data Analytics</span>
+          <span class="pill">SQL</span>
           <span class="pill">Machine Learning</span>
-          <span class="pill">Full-Stack Dev (FSD)</span>
+          <span class="pill">Full Stack Development</span>
         </p>
       </div>
       <div class="card">
-        <h3>Libraries</h3>
+        <h3>Tools & Libraries</h3>
         <p>
-          <span class="pill">NumPy</span>
           <span class="pill">Pandas</span>
+          <span class="pill">NumPy</span>
           <span class="pill">Matplotlib</span>
-        </p>
-      </div>
-      <div class="card">
-        <h3>Tools & Platforms</h3>
-        <p>
-          <span class="pill">MS Excel</span>
-          <span class="pill">Canva</span>
+          <span class="pill">Excel</span>
           <span class="pill">Figma</span>
-          <span class="pill">FlutterFlow</span>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section class="container" id="education">
-    <h2>Education</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>B.E./B.Tech — AI & ML</h3>
-        <p class="meta">SNS College of Technology • 2023–2027</p>
-        <p>CGPA: 8.75</p>
-      </div>
-      <div class="card">
-        <h3>HSC — PSGR Krishnammal Hr. Sec. School</h3>
-        <p class="meta">2021–2022</p>
-        <p>75%</p>
-      </div>
-      <div class="card">
-        <h3>SSLC — PSGR Krishnammal Hr. Sec. School</h3>
-        <p class="meta">2020–2021</p>
-        <p>All Pass</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTS / WORKSHOPS / PAPERS -->
-  <section class="container" id="certs">
-    <h2>Certifications & Activities</h2>
+  <!-- CERTIFICATIONS & HIGHLIGHTS -->
+  <section id="certs">
+    <h2>Highlights</h2>
     <div class="grid">
       <div class="card">
         <h3>Certifications</h3>
-        <ul class="list">
-          <li>IBM — Enterprise Design Thinking (2023)</li>
-          <li>Infosys — Programming using Java (2024)</li>
-          <li>PrepInsta — Python Programming Language (2023)</li>
-          <li>PrepInsta — QA Analyst (2024)</li>
+        <ul>
+          <li>IBM – Enterprise Design Thinking (2023)</li>
+          <li>Infosys – Programming using Java (2024)</li>
+          <li>PrepInsta – Python Programming (2023)</li>
+          <li>PrepInsta – QA Analyst (2024)</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Workshops</h3>
-        <p>Basics of Artificial Intelligence & Machine Learning — Anna University (2023)</p>
-      </div>
-      <div class="card">
-        <h3>Paper Presentations</h3>
-        <ul class="list">
-          <li>Solid Waste Management — Karthavya 2023, Jyothi Engineering College</li>
-          <li>Cataract Project (AIML) — Sree Shakthi 2024 — <strong>secured 3rd place</strong></li>
+        <h3>Achievements</h3>
+        <ul>
+          <li>3rd place – Cataract Project (AI/ML) at Sree Shakthi 2024</li>
+          <li>Presented Solid Waste Management paper – Karthavya 2023</li>
         </ul>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="container" id="contact">
+  <section id="contact">
     <h2>Contact</h2>
     <div class="card">
       <p><strong>Email:</strong> <a href="mailto:helinajency13@gmail.com">helinajency13@gmail.com</a></p>
       <p><strong>Phone:</strong> <a href="tel:+918144114144">+91 81441 14144</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/helina-jency-j" target="_blank" rel="noopener">linkedin.com/in/helina-jency-j</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">github.com/HelinaJency</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/helina-jency-j" target="_blank">linkedin.com/in/helina-jency-j</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/HelinaJency" target="_blank">github.com/HelinaJency</a></p>
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Helina Jency J. Built with ❤️ on GitHub Pages.
+    © <span id="year"></span> Helina Jency J • Built with ❤️ on GitHub Pages
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
