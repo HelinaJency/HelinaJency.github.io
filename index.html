@@ -2,67 +2,236 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name – Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helina Jency J — Portfolio</title>
+  <meta name="description" content="Portfolio of Helina Jency J — Data Analytics, Python, SQL, ML projects." />
+  <style>
+    :root{
+      --bg:#0f172a;         /* slate-900 */
+      --card:#0b1227;       /* deep card */
+      --muted:#94a3b8;      /* slate-400 */
+      --text:#e5e7eb;       /* gray-200 */
+      --brand:#7c3aed;      /* violet-600 */
+      --brand-2:#a78bfa;    /* violet-300 */
+      --pill:#1e293b;       /* slate-800 */
+      --border:#1f2a44;
+      --ok:#22c55e;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0a0f22,#0f172a);color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    a:focus,button:focus{outline:2px solid var(--brand-2);outline-offset:2px;border-radius:8px}
+    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+    /* nav */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(10,15,34,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+    .brand{font-weight:700;letter-spacing:.3px}
+    .menu{display:flex;gap:1rem;flex-wrap:wrap}
+    .menu a{padding:.45rem .8rem;border-radius:999px;background:transparent;border:1px solid transparent}
+    .menu a:hover{border-color:var(--brand);color:var(--brand-2)}
+    /* hero */
+    .hero{padding:4.5rem 0 3rem}
+    .tag{display:inline-block;font-size:.8rem;background:var(--pill);border:1px solid var(--border);padding:.35rem .7rem;border-radius:999px;color:var(--brand-2)}
+    h1{font-size:clamp(1.9rem,4vw,3rem);margin:.75rem 0 .4rem}
+    .subtitle{color:var(--muted);font-size:1.05rem}
+    .cta{margin:1.25rem 0 0;display:flex;gap:.6rem;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.65rem .9rem;border-radius:12px;border:1px solid var(--border);background:var(--pill)}
+    .btn.primary{background:var(--brand);border-color:var(--brand);color:white}
+    .btn:hover{transform:translateY(-1px)}
+    /* sections/cards */
+    section{padding:2.5rem 0;border-top:1px solid var(--border)}
+    h2{font-size:1.4rem;margin:0 0 1rem}
+    .grid{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1rem}
+    .pill{display:inline-block;background:var(--pill);border:1px solid var(--border);padding:.35rem .6rem;border-radius:999px;margin:.2rem;font-size:.85rem}
+    .list{margin:.3rem 0 .2rem;padding-left:1.1rem}
+    .list li{margin:.35rem 0}
+    .meta{color:var(--muted);font-size:.9rem}
+    /* footer */
+    footer{border-top:1px solid var(--border);padding:2rem 0;text-align:center;color:var(--muted)}
+    /* small */
+    @media (max-width:640px){.hero{padding:3.5rem 0 2rem}}
+  </style>
 </head>
 <body>
-  <header class="container">
-    <h1>Your Name</h1>
-    <p class="tagline">Aspiring Data Analyst • Python • SQL</p>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- NAV -->
+  <header class="nav" role="navigation" aria-label="Primary">
+    <div class="container nav-inner">
+      <div class="brand">Helina Jency J</div>
+      <nav class="menu">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container">
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>1–2 lines about what it does and your role.</p>
-          <ul class="meta"><li>Python</li><li>Pandas</li></ul>
-          <p><a href="https://github.com/yourusername/project-one" target="_blank">Code</a> · <a href="#" target="_blank">Live</a></p>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>Short description and outcome/metric.</p>
-          <ul class="meta"><li>HTML</li><li>CSS</li></ul>
-          <p><a href="https://github.com/yourusername/project-two" target="_blank">Code</a></p>
-        </article>
-      </div>
-    </section>
+  <!-- HERO -->
+  <section class="hero container" id="home">
+    <span class="tag">Data Analytics • Python • SQL • ML • FSD</span>
+    <h1>Hello, I’m Helina Jency.</h1>
+    <p class="subtitle">
+      I love turning data into decisions. My interests include analytics, visualization, and
+      building AI/ML solutions that solve real problems.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="mailto:helinajency13@gmail.com" title="Email">Email</a>
+      <a class="btn" href="tel:+918144114144" title="Call">Call</a>
+      <a class="btn" href="https://linkedin.com/in/helina-jency-j" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/HelinaJency" target="_blank" rel="noopener">GitHub</a>
+      <!-- If you upload your resume PDF into the repo (e.g., /resume.pdf), update the link below -->
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+    </div>
+  </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="pill-list">
-        <li>Python</li><li>SQL</li><li>Excel</li><li>HTML</li><li>Power BI</li>
-      </ul>
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>Write a short bio: who you are, what you’re learning, and what roles you’re seeking.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a> ·
-         LinkedIn: <a href="https://linkedin.com/in/your-id" target="_blank">your-id</a>
+  <!-- ABOUT -->
+  <section class="container" id="about">
+    <h2>Career Objective</h2>
+    <div class="card">
+      <p>
+        To leverage my knowledge and contribute to data-driven projects by applying skills in
+        data analysis, visualization, and problem-solving in a dynamic work environment.
       </p>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="container">
-    <small>© <span id="year"></span> Your Name.</small>
+  <!-- PROJECTS -->
+  <section class="container" id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>App for Testing Cataract Eye</h3>
+        <p class="meta">CNN • TensorFlow • Healthcare</p>
+        <p>Built an app concept with a CNN model to assist preliminary cataract screening for
+           Shankara Eye Hospital.</p>
+        <p>
+          <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">Code/Repo</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Personal Finance AI Assistant</h3>
+        <p class="meta">Python • Analytics • Chat-style UX</p>
+        <p>Designed an AI assistant that helps users track spending and receive insights
+           for budgeting and habits.</p>
+        <p>
+          <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">Code/Repo</a>
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Face Recognition Attendance System</h3>
+        <p class="meta">Computer Vision • Automation</p>
+        <p>Automated attendance using face recognition to improve accuracy and efficiency.</p>
+        <p>
+          <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">Code/Repo</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container" id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Technical</h3>
+        <p>
+          <span class="pill">Python</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Data Analytics</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Full-Stack Dev (FSD)</span>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Libraries</h3>
+        <p>
+          <span class="pill">NumPy</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">Matplotlib</span>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Tools & Platforms</h3>
+        <p>
+          <span class="pill">MS Excel</span>
+          <span class="pill">Canva</span>
+          <span class="pill">Figma</span>
+          <span class="pill">FlutterFlow</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="container" id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>B.E./B.Tech — AI & ML</h3>
+        <p class="meta">SNS College of Technology • 2023–2027</p>
+        <p>CGPA: 8.75</p>
+      </div>
+      <div class="card">
+        <h3>HSC — PSGR Krishnammal Hr. Sec. School</h3>
+        <p class="meta">2021–2022</p>
+        <p>75%</p>
+      </div>
+      <div class="card">
+        <h3>SSLC — PSGR Krishnammal Hr. Sec. School</h3>
+        <p class="meta">2020–2021</p>
+        <p>All Pass</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTS / WORKSHOPS / PAPERS -->
+  <section class="container" id="certs">
+    <h2>Certifications & Activities</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Certifications</h3>
+        <ul class="list">
+          <li>IBM — Enterprise Design Thinking (2023)</li>
+          <li>Infosys — Programming using Java (2024)</li>
+          <li>PrepInsta — Python Programming Language (2023)</li>
+          <li>PrepInsta — QA Analyst (2024)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Workshops</h3>
+        <p>Basics of Artificial Intelligence & Machine Learning — Anna University (2023)</p>
+      </div>
+      <div class="card">
+        <h3>Paper Presentations</h3>
+        <ul class="list">
+          <li>Solid Waste Management — Karthavya 2023, Jyothi Engineering College</li>
+          <li>Cataract Project (AIML) — Sree Shakthi 2024 — <strong>secured 3rd place</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:helinajency13@gmail.com">helinajency13@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+918144114144">+91 81441 14144</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/helina-jency-j" target="_blank" rel="noopener">linkedin.com/in/helina-jency-j</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/HelinaJency" target="_blank" rel="noopener">github.com/HelinaJency</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Helina Jency J. Built with ❤️ on GitHub Pages.
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
